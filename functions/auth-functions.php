@@ -5,7 +5,7 @@ function create_user($name ,$username ,$password){
     $pass=password_hash($password, PASSWORD_BCRYPT);
     $sql="INSERT INTO users (name,username,password) VALUES ('$name','$username','$pass')";
     mysqli_query($conn,$sql);
-    header("Location:../index.php");
+    header("Location:/my-project/");
 };
 
 function get_user($username){

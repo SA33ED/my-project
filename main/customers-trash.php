@@ -1,9 +1,9 @@
 <?php
 include "../basic.php";
-$data=customers_list("list");
+$data=customers_list("deleted");
 if(isset($_GET["id"])){
-   customers_delete($_GET["id"],"trash");
-}
+    customers_delete($_GET["id"],"restore");
+ }
  ?>
  <!DOCTYPE html>
  <html lang="en">
@@ -30,19 +30,14 @@ if(isset($_GET["id"])){
       <div class="container">
          <img class="logo" src="../<?php echo "$project_logo";?>" alt="">
          <div>
-            <a href="sign-out.php"><button class="sign-btn">Log out</button></a>
-            <a href="products-list.php"><button class="sign-btn">Products</button></a>
+            <a href="sign-out.php"><button class="sign-btn">log out</button></a>
          </div>  
                      
       </div>
     </div>
       <div class="action">
          <div class="container">
-            <a href="customers-new.php"><button>Add New Customer</button></a>
-            <br>            
-            <br>            
-            <br>            
-            <a href="customers-trash.php"><button>Trash Customers</button></a>            
+            <a href="customers-list.php"><button>customer List</button></a>            
          </div>
       </div>
 
@@ -51,16 +46,11 @@ if(isset($_GET["id"])){
          <?php 
             while($customer=mysqli_fetch_assoc($data)){ ?>
                <div class="product1">
-               
-               <img src="../img/<?php echo $customer["image"];?>" alt="" >
-
-               <h3><?php echo $customer["name"]; ?></h3><br><br>
+               <img src="../img/<?php echo $customer["image"];?>" alt="">
+               <h3><?php echo $customer["name"]; ?></h3>
                <p><?php echo $customer["phone"]; ?></p>
-               <div class="bed">
-               <a href="customers-edit.php?id=<?php echo $customer["id"];?>"><button class="edit-btn">Edit Customer</button></a> 
-               <a href="customers-list.php?id=<?php echo $customer["id"];?>"><button class="del-btn">Delete</button></a> 
-               </div>
-               
+               <a href="customers-trash.php?id=<?php echo $customer["id"];?>"><button class="del-btn">Restore</button></a> 
+
             </div>
          <?php   }?>
          

@@ -465,4 +465,79 @@ text-align: center;
     color:#d46382;
     margin-bottom: 20px;
 }
+
+
+
+ .sales1{
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+.sales1 .container{
+    text-align: center ;
+}
+
+.product1{
+    min-height: 40px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    background-color: #ddd;
+    border-radius: 20px;
+    border: 10px solid #d46382;
+    padding:40px;
+}
+
+.product1 h3{
+    font-weight: bold;
+    font-size: 40px;
+    color: #d46382;
+    margin: 0;
+}
+
+.product1 p{
+    font-size: 40px;
+    color: black;
+    margin: 0;
+}
+
+.product1 img{
+    border-radius: 10px;
+    width:500px;
+    height: 400px;
+}
+
+.sales1 .container .bed{
+    text-align: center;
+}
+
+.sales1 .container .edit-btn , .del-btn{
+    width: 30%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color:#ddd;
+    font-weight: 800;
+    font-size: 30px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-radius: 10px;
+
+}
+
+.sales1 .container .edit-btn{
+    background-color: #d46382;
+    border:5px solid #d46382;
+}
+.sales1 .container .del-btn{
+    background-color: red;
+    border:5px solid red;
+}
+.sales1 .container .edit-btn:hover{
+    background-color: #ddd;
+    color:#d46382;
+
+}
+.sales1 .container .del-btn:hover{
+    background-color: #ddd;
+    color:red;
+}
+
 /* ------------------------------------------------------------------------------------------------------------------- */
