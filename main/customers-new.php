@@ -2,7 +2,7 @@
 include "../basic.php";
 if(isset($_POST['name'])){
     if($_FILES["image"]["name"] == ""){
-        $filename = "defult.png";
+        $filename = "profile.png";
     }else{
         // Getting the Image Temp Name
         // Setting the Image Location
