@@ -2,7 +2,7 @@
 include "../basic.php";
 $data=customers_list("deleted");
 if(isset($_GET["id"])){
-    customers_delete($_GET["id"],"restore");
+    customers_delete($_GET["id"],$_GET["action"]);
  }
  ?>
  <!DOCTYPE html>
@@ -49,7 +49,8 @@ if(isset($_GET["id"])){
                <img src="../img/<?php echo $customer["image"];?>" alt="">
                <h3><?php echo $customer["name"]; ?></h3>
                <p><?php echo $customer["phone"]; ?></p>
-               <a href="customers-trash.php?id=<?php echo $customer["id"];?>"><button class="del-btn">Restore</button></a> 
+               <a href="customers-trash.php?id=<?php echo $customer["id"];?> &action=restore"><button class="edit-btn">Restore</button></a> 
+               <a href="customers-trash.php?id=<?php echo $customer["id"];?> &action=delete"><button class="del-btn">Delete</button></a> 
 
             </div>
          <?php   }?>

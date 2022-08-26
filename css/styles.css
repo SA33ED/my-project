@@ -169,7 +169,7 @@ html{
 .landing .intro-text{
     position: absolute;
     left: 25%;
-    top: 45%;
+    top: 50%;
     right:0;
     transform: translate(-50%,-50%);
     color:#d46382;

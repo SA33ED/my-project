@@ -20,6 +20,9 @@ function customers_delete($id ,$x){
     }elseif($x=="restore"){
         $sql="UPDATE customers SET active=1 WHERE id=$id";
         $location="customers-trash.php";
+    }elseif($x=="delete"){
+        $sql="DELETE FROM customers WHERE id=$id";
+        $location="customers-trash.php";
     }
     mysqli_query($conn,$sql);
     header("Location:$location");
@@ -63,6 +66,8 @@ function customers_update($id,$name,$phone,$img){
     mysqli_query($conn,$sql);
     header("Location:customers-list.php");
 }
+
+
 
 
  ?>
